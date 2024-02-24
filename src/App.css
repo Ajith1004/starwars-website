@@ -1,38 +1,73 @@
-.App {
+body {
+  background-image: url(https://images.hdqwalls.com/wallpapers/stars-galaxy-space-4k-qc.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.app {
+  max-width: auto;
+  margin: auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app h1{
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.planet-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  grid-gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.planet-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #242424; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.planet-card h2 {
+  margin-top: 0;
+}
+
+.planet-card ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.planet-card ul li {
+  list-style-type: none;
+}
+
+/* Add hover effect */
+.planet-card:hover {
+  
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  color: #242424;
+
+}
+
+.pagination-btn {
+  background-color: #262a66; 
+  border: none;
   color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination-btn:hover {
+  background-color: #ececec; 
+  color: #242424;
 }

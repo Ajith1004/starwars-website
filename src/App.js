@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { fetchPlanets } from './services/swapiservice';
+import PlanetList from './components/planetlist';
 import './App.css';
+const App = () => {
+  const [planets, setPlanets] = useState([]);
 
-function App() {
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchPlanets();
+      if (data) {
+        setPlanets(data.results);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>STAR WARS PLANETS DIRECTORY</h1>
+      <PlanetList planets={planets} />
     </div>
   );
-}
+};
 
 export default App;

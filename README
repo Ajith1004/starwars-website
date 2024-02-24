@@ -1,0 +1,13 @@
+### Star Wars Planets Directory
+
+Welcome to the Star Wars Planets Directory! This project is a simple React application that allows users to explore information about planets in the Star Wars universe.
+
+###Features
+View a list of planets from the Star Wars universe.
+Click on a planet to view detailed information, including climate, population, terrain, and residents.
+Navigate through the list of planets using pagination buttons.
+
+###Technologies Used
+React: A JavaScript library for building user interfaces.
+Axios: A promise-based HTTP client for making requests to the Star Wars API.
+CSS: Cascading Style Sheets for styling the application.
